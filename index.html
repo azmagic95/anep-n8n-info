@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Описание приложения ANEP n8n: регистрация входящих сообщений Telegram в Google Таблицах.">
+<meta name="color-scheme" content="light">
+<title>ANEP n8n — приём заявок из Telegram</title>
+<style>
+:root{--ink:#172d37;--muted:#506570;--line:#d7e3e6;--accent:#05675f;--soft:#e3f2ed;--paper:#fff;--bg:#f4f7f8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--accent);text-underline-offset:4px}a:hover{text-decoration-thickness:2px}a:focus-visible{outline:3px solid #b36809;outline-offset:5px;border-radius:2px}
+.wrap{max-width:1100px;margin:auto;padding:0 28px}header{background:var(--paper);border-bottom:1px solid var(--line)}.top{display:flex;align-items:center;justify-content:space-between;gap:25px;padding-top:23px;padding-bottom:23px}
+.brand{font-size:22px;font-weight:800;text-decoration:none;color:var(--ink);letter-spacing:-.7px;white-space:nowrap}.brand span{color:var(--accent);font-weight:500}
+nav{display:flex;flex-wrap:wrap;gap:10px 24px;font-size:14px}nav a{color:var(--muted);text-decoration:none}nav a[aria-current=page]{color:var(--accent);font-weight:700}
+main{padding-top:64px;padding-bottom:64px}.eyebrow{font-size:12px;letter-spacing:1.8px;text-transform:uppercase;font-weight:750;color:var(--accent);margin:0 0 18px}
+h1,h2,h3{line-height:1.22;letter-spacing:-.035em}h1{font-size:clamp(32px,5vw,54px);margin:0 0 25px;font-weight:750}h2{font-size:26px;margin-top:38px}h3{font-size:20px}
+p{margin:0 0 18px}.lead{font-size:20px;line-height:1.6;color:var(--muted);max-width:650px}.hero{display:grid;grid-template-columns:1.7fr 1fr;gap:48px;align-items:start}
+.scope{border-top:4px solid var(--accent);background:var(--soft);padding:26px;border-radius:0 0 16px 16px}.scope h2{margin:0 0 16px;font-size:23px}.scope p{font-size:15px}.scope p:last-child{margin:0}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:48px 0 45px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.step{padding:27px 25px 27px 0}.step+.step{padding-left:25px;border-left:1px solid var(--line)}.number{font-size:12px;color:var(--accent);font-weight:750;letter-spacing:1px}.step h2{font-size:20px;margin:10px 0}.step p{font-size:15px;margin:0;color:var(--muted)}
+.section{max-width:780px;margin-bottom:32px}.section h2{margin-top:0}.doclinks{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:25px;font-size:16px}
+.document{max-width:850px;margin:auto;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:clamp(24px,5vw,52px)}.document h1{font-size:clamp(29px,4vw,40px)}.document h2{font-size:23px;margin-top:38px}.document .date{font-size:14px;color:var(--muted);margin-bottom:32px}.document a{overflow-wrap:anywhere}
+footer{border-top:1px solid var(--line);padding:30px 0 35px;color:var(--muted);font-size:14px}footer .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}footer p{margin:0 0 4px}footer a{overflow-wrap:anywhere}.skip{position:absolute;top:-100px;left:18px;padding:10px 18px;background:white;z-index:10}.skip:focus{top:10px}
+@media(max-width:700px){.wrap{padding:0 20px}.top{align-items:flex-start;flex-direction:column;padding-top:19px;padding-bottom:19px;gap:14px}nav{gap:8px 16px}main{padding-top:36px;padding-bottom:40px}.hero{grid-template-columns:1fr;gap:28px}.steps{grid-template-columns:1fr;margin:32px 0}.step,.step+.step{padding:20px 0;border-left:0}.step+.step{border-top:1px solid var(--line)}.document{border-radius:12px;padding:25px 22px}.lead{font-size:18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{body{background:white;font-size:12pt}header,footer,.skip{display:none}main{padding:0}.document{border:0;padding:0;max-width:none}a{color:inherit}.hero{display:block}.scope{margin-top:20px}h1,h2{break-after:avoid}p{orphans:3;widows:3}}
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Перейти к содержанию</a>
+<header><div class="wrap top"><a class="brand" href="index.html" aria-label="ANEP n8n — главная">ANEP <span>n8n</span></a><nav aria-label="Основная навигация"><a href="index.html" aria-current="page">Приложение</a><a href="privacy.html">Конфиденциальность</a><a href="terms.html">Условия</a></nav></div></header>
+<main id="content" class="wrap">
+<section class="hero" aria-labelledby="home-title">
+<div><p class="eyebrow">Служебная интеграция</p><h1 id="home-title">ANEP n8n — приём<br>заявок из Telegram</h1>
+<p class="lead">Входящие сообщения по логистике сохраняются в выбранную Google Таблицу: текст, дата, отправитель и идентификаторы сообщения.</p>
+<div class="doclinks"><a href="privacy.html">Политика конфиденциальности</a><a href="terms.html">Условия использования</a></div></div>
+<aside class="scope"><p class="eyebrow">Текущая версия</p><h2>Текстовые сообщения</h2>
+<p>Приложение получает сообщения через Telegram-бота и регистрирует их для дальнейшей работы логиста.</p>
+<p>Автоматическая загрузка вложений и обработка с помощью ИИ в этот сценарий n8n ещё не включены.</p></aside>
+</section>
+<section class="steps" aria-label="Порядок обработки сообщения">
+<div class="step"><span class="number">01 / ПОЛУЧЕНИЕ</span><h2>Сообщение в Telegram</h2><p>Бот получает текст, время отправки и данные отправителя.</p></div>
+<div class="step"><span class="number">02 / ОТВЕТ</span><h2>Подтверждение получения</h2><p>Бот сообщает, что получил сообщение.</p></div>
+<div class="step"><span class="number">03 / ЗАПИСЬ</span><h2>Строка в Google Таблице</h2><p>Сценарий добавляет запись в настроенный лист. Результат можно проверить в таблице.</p></div>
+</section>
+<section class="section"><h2>Для чего нужен доступ к Google</h2>
+<p>Доступ к Google Таблицам нужен для выбора рабочего документа, чтения структуры листа и записи входящих сообщений. Google Drive API используется при выборе документов и получении необходимых сведений о них.</p>
+<p>Владелец аккаунта подключает Google через окно разрешений Google. Перечень запрашиваемых прав отображается при подключении. Доступ можно отозвать в настройках своего Google-аккаунта.</p></section>
+<section class="section"><h2>Вопросы о приложении и данных</h2>
+<p>Администратор интеграции — Александр Зубакин. По вопросам работы приложения, доступа или удаления данных напишите на <a href="mailto:zubakin_alexander@mail.ru">zubakin_alexander@mail.ru</a>.</p></section>
+</main>
+<footer><div class="wrap foot"><div><p><strong>ANEP n8n</strong></p><p>Приём входящих сообщений по логистике</p></div><div><p>Администратор: Александр Зубакин</p><a href="mailto:zubakin_alexander@mail.ru">zubakin_alexander@mail.ru</a></div></div></footer>
+</body>
+</html>
